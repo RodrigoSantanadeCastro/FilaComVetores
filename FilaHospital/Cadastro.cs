@@ -39,25 +39,29 @@ namespace FilaHospital
 
         public void CadastrarFila()
         {
+
             
+                for (int i = 0; i <= 10; i++)
+                {
+                    if (this.Nome[i] == null && this.Idade[i] == 0)
+                    {
+                        Console.WriteLine("Digite  o nome do pasciente ");
+                        string name = Console.ReadLine();
+
+                        this.Nome[i] = name;
+
+                        Console.WriteLine("Qual é a idade do pasciente ?");
+                        int idade = int.Parse(Console.ReadLine());
+
+                        this.Idade[i] = idade;
+
+
+                        Console.WriteLine("O pasciente :" + this.Nome[i] + " de " + this.Idade[i] + " anos, foi cadastrado com sucesso");
+                        break;
+
+                    }else { }
+                }
             
-            for (int i=0 ; i <= 10; i++)
-            {
-                Console.WriteLine("Digite  o nome do pasciente ");
-                string name = Console.ReadLine();
-
-                this.Nome[i] = name;
-
-                Console.WriteLine("Qual é a idade do pasciente ?");
-                int idade = int.Parse(Console.ReadLine());
-
-                this.Idade[i] = idade;
-
-
-                Console.WriteLine("O pasciente :"+ this.Nome[i] + " de " + this.Idade[i]+" anos, foi cadastrado com sucesso");
-                
-
-            }
 
         }
 
