@@ -1,0 +1,14 @@
+C:\Users\Tecnico\Desktop\hospital\FilaHospital\FilaHospital\bin\Debug\FilaHospital.exe.config
+C:\Users\Tecnico\Desktop\hospital\FilaHospital\FilaHospital\bin\Debug\FilaHospital.exe
+C:\Users\Tecnico\Desktop\hospital\FilaHospital\FilaHospital\bin\Debug\FilaHospital.pdb
+C:\Users\Tecnico\Desktop\hospital\FilaHospital\FilaHospital\obj\Debug\FilaHospital.csproj.AssemblyReference.cache
+C:\Users\Tecnico\Desktop\hospital\FilaHospital\FilaHospital\obj\Debug\FilaHospital.csproj.CoreCompileInputs.cache
+C:\Users\Tecnico\Desktop\hospital\FilaHospital\FilaHospital\obj\Debug\FilaHospital.exe
+C:\Users\Tecnico\Desktop\hospital\FilaHospital\FilaHospital\obj\Debug\FilaHospital.pdb
+C:\Users\Rodrigo\Desktop\FilaHospital\FilaHospital\bin\Debug\FilaHospital.exe.config
+C:\Users\Rodrigo\Desktop\FilaHospital\FilaHospital\bin\Debug\FilaHospital.exe
+C:\Users\Rodrigo\Desktop\FilaHospital\FilaHospital\bin\Debug\FilaHospital.pdb
+C:\Users\Rodrigo\Desktop\FilaHospital\FilaHospital\obj\Debug\FilaHospital.csproj.AssemblyReference.cache
+C:\Users\Rodrigo\Desktop\FilaHospital\FilaHospital\obj\Debug\FilaHospital.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Desktop\FilaHospital\FilaHospital\obj\Debug\FilaHospital.exe
+C:\Users\Rodrigo\Desktop\FilaHospital\FilaHospital\obj\Debug\FilaHospital.pdb
