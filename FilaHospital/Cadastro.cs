@@ -29,11 +29,11 @@ namespace FilaHospital
             set { posicao = value; }
         }
 
-        protected string[] estado = new string[11];
-        public string[] Estado
+        protected string[] prioritario = new string[11];
+        public string[] Prioritario
         {
-            get { return estado; }
-            set { estado = value; }
+            get { return prioritario; }
+            set { prioritario = value; }
         }
 
 
@@ -45,18 +45,18 @@ namespace FilaHospital
                 {
                     if (this.Nome[i] == null && this.Idade[i] == 0)
                     {
-                        Console.WriteLine("Digite  o nome do pasciente ");
+                        Console.WriteLine("Digite  o nome do paciente ");
                         string name = Console.ReadLine();
 
                         this.Nome[i] = name;
 
-                        Console.WriteLine("Qual é a idade do pasciente ?");
+                        Console.WriteLine("Qual é a idade do paciente ?");
                         int idade = int.Parse(Console.ReadLine());
 
                         this.Idade[i] = idade;
 
 
-                        Console.WriteLine("O pasciente :" + this.Nome[i] + " de " + this.Idade[i] + " anos, foi cadastrado com sucesso");
+                        Console.WriteLine("O paciente :" + this.Nome[i] + " de " + this.Idade[i] + " anos, foi cadastrado com sucesso");
                         break;
 
                     }else { }
@@ -69,28 +69,95 @@ namespace FilaHospital
         public void colocarFila()
         {
 
-            Console.WriteLine("Qual o nome do pasciente que você deseja colocar na fila de atendimento ?");
+            Console.WriteLine("Qual o nome do paciente que você deseja colocar na fila de atendimento ?");
             string nomefila = Console.ReadLine();
 
-           for (int j=0 ;j <= 10; j++)
-            {
-                if (this.Posicao[j] == null)
+            Console.WriteLine("Paciente é prioritario ?");
+            Console.WriteLine("s-Para sim ?");
+            Console.WriteLine("n-Para não ?");
+            string prio = Console.ReadLine();
+
+            if (prio == "s") {
+                for (int j = 0; j <= 10; j++)
                 {
-                    this.Posicao[j] = nomefila;
-                    break;
+                    if (this.Prioritario[j] == null)
+                    {
+                        this.Prioritario[j] = nomefila;
+                        break;
+                    }
+                    else { }
                 }
-                else { }
+            }
+            else
+            {
+                for (int k = 0; k <= 10; k++)
+                {
+                    if (this.Posicao[k] == null)
+                    {
+                        this.Posicao[k] = nomefila;
+                        break;
+                    }
+                    else { }
+                }
+
             }
 
         }
 
         public void mostrarFila()
         {
-            for (int x = 0; x <= 10; x++)
-            {
-                Console.WriteLine("Pasciente numero "+x + this.Posicao[x]);
+            
+                
+                    for(int y = 0; y <= 10; y++) 
+                    {
+                        if (this.Prioritario[y] == null)
+                        {
+                            Console.WriteLine("Paciente numero " + y + this.Posicao[y]);
+                        }else 
+                        {
+                            Console.WriteLine("Paciente numero " + y + this.Prioritario[y] + " Da fila prioritaria");
+                        }
+                    }
+                    
+                
+               
 
+            
+        }
+
+        public void atenderFila() 
+        {
+            if (this.Prioritario[0] == null)
+            {
+                Console.WriteLine("Paciente "+ this.Posicao[0] +" será atendido agora.");
+                Console.WriteLine("Paciente " + this.Posicao[0] + " atendido.");
+
+                this.Posicao[0] = "";
+                
+                for (int y = 0;y <= 9;y++)
+                {
+                    int m = y + 1;
+                    this.Posicao[y] = this.Posicao[m];
+                    this.Posicao[m] = "";
+                    
+                }
+            }
+            else {
+                Console.WriteLine("Paciente " + this.Prioritario[0] + " será atendido agora.");
+                Console.WriteLine("Paciente " + this.Prioritario[0] + " atendido.");
+
+                this.Prioritario[0] = "";
+
+                for (int y = 0; y <= 9; y++)
+                {
+                    int m = y + 1;
+                    this.Prioritario[y] = this.Prioritario[m];
+                    this.Prioritario[m] = "";
+
+                }
             }
         }
+
+        
     }
 }
